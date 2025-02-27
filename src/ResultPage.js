@@ -48,9 +48,9 @@ function ResultPage() {
     const { studentId } = useParams();
     const student = students.find(s => s.id.toString() === studentId);
     const result = student
-        ? `${student.name} ${student.score > 75 ? "Lulus" : "Tidak Lulus"}`
+        ? `${student.name} ${student.score > 74 ? "Lulus" : "Tidak Lulus"}`
         : 'Nomor absen tidak ditemukan.';
-    const isPassed = student && student.score > 75;
+    const isPassed = student && student.score > 74;
 
     return (
         <div className="container mt-5">
